@@ -5,7 +5,7 @@ import pandas as pd
 pd.set_option('display.max_columns', 10)
 
 #Read csv
-df = pd.read_csv('Sales Transactions 1.csv')
+df = pd.read_csv('Datasets/Sales Transactions 1.csv')
 
 # Group by 'ProductNo' and count the number of transactions per item
 transactions_per_item = df.groupby('ProductNo')['TransactionNo'].count().reset_index()
@@ -27,4 +27,4 @@ average_transactions_per_month = transactions_per_month_per_item.groupby('Produc
 print(average_transactions_per_month)
 
 #Export result to csv
-average_transactions_per_month.to_csv('AverageTransactionPerItem.csv', index=False)
+average_transactions_per_month.to_csv('Datasets/AverageTransactionPerItem.csv', index=False)

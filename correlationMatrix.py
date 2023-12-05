@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 import seaborn as sns
 
 #Read csv
-data=pd.read_csv("inventory1.csv")
+data=pd.read_csv("Datasets/inventory1.csv")
 print(data.head())
 
 print(data.columns)

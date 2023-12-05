@@ -1,14 +1,14 @@
 import numpy as np
 import pandas as pd
 
-df = pd.read_csv("inventory.csv", encoding = "windows-1252")
+df = pd.read_csv("Datasets/inventory.csv", encoding = "windows-1252")
 print(df)
 
-additional_info = pd.read_csv('AverageQuantityPerMonthPerItem.csv')
+additional_info = pd.read_csv('Datasets/AverageQuantityPerMonthPerItem.csv')
 
-additional_info1 = pd.read_csv('AverageQuantityPerItem2019.csv')
+additional_info1 = pd.read_csv('Datasets/AverageQuantityPerItem.csv')
 
-additional_info2 = pd.read_csv('AverageTransactionPerItem.csv')
+additional_info2 = pd.read_csv('Datasets/AverageTransactionPerItem.csv')
 
 # Merge the two DataFrames based on the 'ProductNo' column
 merged_df = pd.merge(df, additional_info, on='ProductName', how='left')
@@ -72,4 +72,4 @@ count_above_1 = merged_df2.isna().sum()
 print("value count", count_above_1)
 
 print(merged_df2)
-merged_df2.to_csv('inventory1.csv', index=False)
+merged_df2.to_csv('Datasets/inventory1.csv', index=False)

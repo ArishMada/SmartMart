@@ -2,7 +2,7 @@
 import pandas as pd
 
 #Read csv
-df = pd.read_csv("Sales Transactions 1.csv", encoding = "windows-1252")
+df = pd.read_csv("Datasets/Sales Transactions 1.csv", encoding = "windows-1252")
 print(df)
 
 # Convert the 'Date' column to datetime format
@@ -33,4 +33,4 @@ pivot_df = pivot_df.fillna(0)
 print(pivot_df)
 
 # Export the result to csv
-pivot_df.to_csv('AverageQuantityPerMonthPerItem.csv', index=False)
+pivot_df.to_csv('Datasets/AverageQuantityPerMonthPerItem.csv', index=False)

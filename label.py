@@ -4,7 +4,7 @@
 
 import pandas as pd
 
-df = pd.read_csv('inventory1.csv')
+df = pd.read_csv('Datasets/inventory1.csv')
 
 
 # Define a function to apply based on conditions
@@ -31,7 +31,7 @@ merged_df = pd.merge(df, df1, on='ProductName', how='left')
 
 print(merged_df)
 
-merged_df.to_csv('inventory1.csv', index=False)
+merged_df.to_csv('Datasets/inventory1.csv', index=False)
 
 # for index, row in df1.iterrows():
 #     restock = row["Restock"]
